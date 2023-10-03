@@ -1,0 +1,51 @@
+meal_id,meal_name,category,calories,protein,fat,carbohydrates,gluten,lactose,nuts,vegetarian,baking,frying,roasting,grilling,preparation_time,cuisine,temperature
+1,Spaghetti Bolognese,Pasta,500,20,10,45,false,false,false,false,false,false,false,false,30,Italian,hot
+2,Chicken Caesar Salad,Salad,350,25,15,20,true,true,false,false,false,false,false,false,15,American,cold
+3,Pepperoni Pizza,Pizza,700,30,35,60,true,true,false,false,true,false,true,false,25,Italian,hot
+4,Sushi Platter,Sushi,300,15,10,40,true,true,true,false,false,false,true,false,20,Japanese,cold
+5,Vegetable Stir-Fry,Vegetarian,250,10,5,35,true,true,false,true,false,false,false,true,15,Asian,hot
+6,Grilled Salmon,Seafood,400,30,20,10,true,true,false,false,false,true,false,true,20,American,hot
+7,Margarita Pizza,Pizza,650,25,30,55,true,true,false,false,true,false,true,false,25,Italian,hot
+8,Beef Tacos,Mexican,450,22,15,30,true,true,false,false,true,false,true,false,20,Mexican,hot
+9,Chicken Alfredo,Pasta,600,25,30,50,true,true,false,false,false,false,false,false,30,Italian,hot
+10,Caesar Salad,Salad,300,15,20,15,true,true,false,false,false,false,false,false,10,American,cold
+11,Chicken Teriyaki Stir-Fry,Asian,350,20,15,30,true,true,false,true,false,false,false,true,15,Asian,hot
+12,Beef and Broccoli,Asian,450,25,20,35,true,true,false,true,false,false,false,true,20,Asian,hot
+13,Spinach and Feta Stuffed Chicken,Chicken,350,30,15,20,true,true,false,false,true,true,false,false,25,Mediterranean,hot
+14,Vegetable Curry,Vegetarian,300,10,15,40,true,true,false,true,false,false,false,true,20,Indian,hot
+15,Shrimp Scampi,Seafood,400,25,20,25,true,true,false,false,true,false,false,true,15,Italian,hot
+16,Hawaiian Pizza,Pizza,600,20,30,50,true,true,false,false,true,false,true,false,25,Italian,hot
+17,Steak Fajitas,Mexican,500,28,20,35,true,true,false,false,true,false,true,false,25,Mexican,hot
+18,Lasagna,Pasta,550,25,25,45,false,true,false,false,false,false,false,false,35,Italian,hot
+19,Cobb Salad,Salad,350,20,25,15,true,true,false,false,false,false,false,false,15,American,cold
+20,Tuna Sushi Roll,Sushi,250,12,5,30,true,true,true,false,false,false,true,false,20,Japanese,cold
+21,Crispy Tofu Stir-Fry,Vegetarian,300,15,10,35,true,true,false,true,false,false,false,true,15,Asian,hot
+22,Grilled Shrimp,Seafood,250,28,10,5,true,true,false,false,true,true,false,false,10,American,hot
+23,Supreme Pizza,Pizza,750,35,40,65,true,true,false,false,true,false,true,false,30,Italian,hot
+24,Chicken Enchiladas,Mexican,400,22,20,30,true,true,false,false,true,false,true,false,25,Mexican,hot
+25,Spicy Ramen,Asian,450,18,20,40,true,true,false,true,false,false,false,true,20,Asian,hot
+26,Honey Glazed Chicken,Chicken,350,30,15,25,true,true,false,false,true,true,false,false,25,American,hot
+27,Eggplant Parmesan,Vegetarian,400,10,20,45,true,true,false,true,false,false,false,true,30,Italian,hot
+28,Salmon Teriyaki,Seafood,350,28,15,20,true,true,false,false,true,true,false,false,20,Japanese,hot
+29,Veggie Quesadillas,Mexican,300,15,15,25,true,true,false,true,false,false,false,true,15,Mexican,hot
+30,Penne alla Vodka,Pasta,550,15,25,40,false,true,false,false,false,false,false,false,30,Italian,hot
+31,Greek Salad,Salad,300,12,20,15,true,true,false,false,false,false,false,false,15,Greek,cold
+32,California Roll,Sushi,300,10,10,40,true,true,true,false,false,false,true,false,20,Japanese,cold
+33,Pad Thai,Asian,400,18,15,35,true,true,false,true,false,false,false,true,20,Thai,hot
+34,Barbecue Ribs,Barbecue,700,35,40,30,true,true,false,false,true,false,true,false,45,American,hot
+35,Chicken Tikka Masala,Indian,500,25,20,30,true,true,false,false,false,false,false,false,30,Indian,hot
+36,Beef Burrito,Mexican,450,22,20,35,true,true,false,false,true,false,true,false,25,Mexican,hot
+37,Teriyaki Salmon,Seafood,350,30,15,20,true,true,false,false,true,true,false,false,20,Japanese,hot
+38,Chicken Parmesan,Chicken,400,28,20,25,true,true,false,false,true,true,false,false,30,Italian,hot
+39,Vegetable Lasagna,Vegetarian,350,15,20,35,true,true,false,true,false,false,false,true,35,Italian,hot
+40,Shrimp Scampi Pasta,Seafood,450,20,25,40,true,true,false,false,true,false,true,false,30,Italian,hot
+41,Pho,Asian,300,18,10,30,true,true,false,true,false,false,false,true,25,Vietnamese,hot
+42,BBQ Chicken Pizza,Pizza,650,30,30,45,true,true,false,false,true,false,true,false,25,Italian,hot
+43,Chimichangas,Mexican,550,25,25,40,true,true,false,false,true,true,false,false,35,Mexican,hot
+44,Beef and Mushroom Stir-Fry,Asian,400,28,15,30,true,true,false,true,false,false,false,true,20,Asian,hot
+45,Spinach and Artichoke Dip,Appetizer,250,10,20,20,true,true,false,true,false,false,false,true,15,American,hot
+46,Crispy Calamari,Seafood,350,20,15,25,true,true,false,false,true,true,false,false,20,Italian,hot
+47,Cajun Jambalaya,Creole,500,22,25,35,true,true,false,true,false,false,false,true,30,Cajun,hot
+48,Lemon Garlic Shrimp,Seafood,300,30,10,15,true,true,false,false,true,true,false,false,15,Italian,hot
+49,Chicken Fajita Bowl,Mexican,400,25,15,30,true,true,false,false,true,true,false,false,25,Mexican,hot
+50,Chicken and Broccoli Alfredo,Pasta,550,20,25,40,false,true,false,false,false,false,false,false,35,Italian,hot

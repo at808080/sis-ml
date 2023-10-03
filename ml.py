@@ -5,9 +5,9 @@ from surprise import accuracy
 from surprise import SVD
 
 # Load sample data from CSV files
-meals_df = pd.read_csv('meals.csv')
-users_df = pd.read_csv('users.csv')
-ratings_df = pd.read_csv('ratings.csv')
+meals_df = pd.read_csv('data/meals.csv')
+users_df = pd.read_csv('data/users.csv')
+ratings_df = pd.read_csv('data/ratings.csv')
 
 
 ###
