@@ -40,7 +40,7 @@ cosine_sim = create_similarity_matrix(meals_df)
 def get_recommendations():
     user_id = request.args.get('user_id', type=int)
     meal_id = request.args.get('meal_id', type=int)
-    num_recommendations = 5
+    num_recommendations = 50
 
     if user_id is not None:
         user_user_recs = user_user_algo.get_neighbors(user_id, k=num_recommendations)
