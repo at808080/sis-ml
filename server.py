@@ -11,6 +11,8 @@ from collaborative_filtering import (
 )
 from content_based_filtering import create_similarity_matrix, get_top_similar_meals
 
+import json
+
 app = Flask(__name__)
 
 # Load and preprocess data for collaborative filtering
@@ -45,9 +47,47 @@ def get_recommendations():
     if user_id is not None:
         user_user_recs = user_user_algo.get_neighbors(user_id, k=num_recommendations)
         item_item_recs = item_item_algo.get_neighbors(user_id, k=num_recommendations)
+
+        user_user_recs_rich = []
+        for meal_id_ in user_user_recs:
+            print("meal id", meal_id_)
+            meal_info = meals_df[meals_df['meal_id'] == meal_id_] #.iloc[0]  # using .iloc[0] to get the first row as a Series
+            print("meal info", meal_info)
+            #meal_dict = meal_info.to_dict()  # Convert the Series to a dictionary
+            meal_dict = {}
+            for column in meals_df.columns:
+                meal_dict[column] = meal_info[column]
+            
+            print("meal dict", meal_dict)# json.dumps(meal_dict))
+
+
+            # user_user_recs_rich.append(json.dumps(meal_dict))
+            print("baking ", meal_info['baking'])
+            # print(meal_info['baking'])
+            user_user_recs_rich.append({
+                "baking": meal_info['baking'],
+                "calories": meal_info['calories'],
+                "carbohydrates": meal_info['carbohydrates'],
+                "category": meal_info['category'],
+                "cuisine": meal_info['cuisine'],
+                "fat": meal_info['fat'],
+                "frying": meal_info['frying'],
+                "gluten": meal_info['gluten'],
+                "grilling": meal_info['grilling'],
+                "lactose": meal_info['lactose'],
+                "meal_id": meal_info['meal_id'],
+                "meal_name": meal_info['meal_name'],
+                "nuts": meal_info['nuts'],
+                "preparation_time": meal_info['preparation_time'],
+                "protein": meal_info['protein'],
+                "roasting": meal_info['roasting'],
+                "temperature": meal_info['temperature'],
+                "vegetarian": meal_info['vegetarian']
+            })
+
         return jsonify({
-            "user_user_recommendations": user_user_recs,
-            "item_item_recommendations": item_item_recs
+            "user_user_recommendations": user_user_recs# user_user_recs_rich,
+            # "item_item_recommendations": item_item_recs
         })
 
     if meal_id is not None:
