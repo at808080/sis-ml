@@ -70,8 +70,6 @@ def getMealPlan(days, mealLikes, mealDislikes, dietaryReqs):
     lunchdinnerfilteredMealsDf = getFilteredMealsDataframe(all_meals_df, mealDislikes, dietaryReqs, [])
     breakfastfilteredMealsDf = getFilteredMealsDataframe(all_meals_df, mealDislikes, dietaryReqs, ["Breakfast"])
 
-    # mealLikeIdx = 0
-
     lunchdinnerlikes = []
     for mealId in mealLikes: 
         if getMealProp(mealId,"category") != "Breakfast": lunchdinnerlikes.append(mealId) 
@@ -79,24 +77,12 @@ def getMealPlan(days, mealLikes, mealDislikes, dietaryReqs):
     for mealId in mealLikes: 
         if getMealProp(mealId,"category") == "Breakfast": breakfastlikes.append(mealId)
 
-    # if len(lunchdinnerlikes) == 0:
-    #     lunchdinnerlikes.append() 
-
-    # lunchdinnermealsrequired = days * 2
-    # breakfastmealsrequired = days    
-
-
     print(breakfastfilteredMealsDf)
 
     print("\n\n")
 
     breakfastRecs = getRecommendationsByMeall(breakfastlikes[-1], days, breakfastfilteredMealsDf)
     lunchDinnerRecs = getRecommendationsByMeall(lunchdinnerlikes[-1], days * 2, lunchdinnerfilteredMealsDf )
-
-    # print("lunchdinnerrecs\n")
-    # # print(lunchDinnerRecs)
-    # print(lunchDinnerRecs.iloc[0])
-    # print("\n\n")
 
     mealPlan = []
     for day in range(0, days):
