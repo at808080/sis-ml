@@ -47,24 +47,19 @@ def get_recommendations():
 
     if user_id is not None:
         user_user_recs = user_user_algo.get_neighbors(user_id, k=num_recommendations)
-        # item_item_recs = item_item_algo.get_neighbors(user_id, k=num_recommendations)
 
         user_user_recs_rich = []
         for meal_id_ in user_user_recs:
             print("meal id", meal_id_)
             meal_info = meals_df[meals_df['meal_id'] == meal_id_] #.iloc[0]  # using .iloc[0] to get the first row as a Series
             print("meal info", meal_info)
-            #meal_dict = meal_info.to_dict()  # Convert the Series to a dictionary
             meal_dict = {}
             for column in meals_df.columns:
                 meal_dict[column] = meal_info[column]
             
-            print("meal dict", meal_dict)# json.dumps(meal_dict))
+            print("meal dict", meal_dict)
 
-
-            # user_user_recs_rich.append(json.dumps(meal_dict))
             print("baking ", meal_info['baking'])
-            # print(meal_info['baking'])
             user_user_recs_rich.append({
                 "baking": meal_info['baking'],
                 "calories": meal_info['calories'],
@@ -88,8 +83,6 @@ def get_recommendations():
 
         return jsonify({
             "user_user_recommendations": user_user_recs
-            # user_user_recs_rich,
-            # "item_item_recommendations": item_item_recs
         })
 
     if meal_id is not None:
@@ -104,21 +97,15 @@ def get_recommendations():
 
 @app.route('/get_meal_plan', methods=['GET'])
 def get_meal_plan():
-    # Get parameters from the request's query string
     days = request.args.get('days', type=int)
     mealLikes = request.args.getlist('mealLikes', type=int)
     mealDislikes = request.args.getlist('mealDislikes', type=int)
     dietaryReqs = request.args.getlist('dietaryReqs', type=str)
 
-    # Check if required parameters are provided
     if days is None or mealLikes is None or mealDislikes is None or dietaryReqs is None:
         return jsonify({"error": "Missing parameters"}), 400
 
-    # Call the getMealPlan function with the provided parameters
     meal_plan = getMealPlan(days, mealLikes, mealDislikes, dietaryReqs)
-
-    # Return the result as a JSON response
-    # return jsonify({"meal_plan": meal_plan})
 
     days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
@@ -126,23 +113,16 @@ def get_meal_plan():
 
     return json.dumps({"meal_plan": meal_plan})
 
-@app.route('/get_meal_plan', methods=['GET'])
+@app.route('/get_meal_plan_montosun', methods=['GET'])
 def get_meal_plan_montosun():
-    # Get parameters from the request's query string
-    # days = request.args.get('days', type=int)
     mealLikes = request.args.getlist('mealLikes', type=int)
     mealDislikes = request.args.getlist('mealDislikes', type=int)
     dietaryReqs = request.args.getlist('dietaryReqs', type=str)
 
-    # Check if required parameters are provided
-    if days is None or mealLikes is None or mealDislikes is None or dietaryReqs is None:
+    if mealLikes is None or mealDislikes is None or dietaryReqs is None:
         return jsonify({"error": "Missing parameters"}), 400
 
-    # Call the getMealPlan function with the provided parameters
     meal_plan = getMealPlan(7, mealLikes, mealDislikes, dietaryReqs)
-
-    # Return the result as a JSON response
-    # return jsonify({"meal_plan": meal_plan})
 
     days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
