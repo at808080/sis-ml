@@ -125,6 +125,32 @@ def get_meal_plan():
     print(json.dumps({"meal_plan": meal_plan[0]}))
 
     return json.dumps({"meal_plan": meal_plan})
+
+@app.route('/get_meal_plan', methods=['GET'])
+def get_meal_plan_montosun():
+    # Get parameters from the request's query string
+    # days = request.args.get('days', type=int)
+    mealLikes = request.args.getlist('mealLikes', type=int)
+    mealDislikes = request.args.getlist('mealDislikes', type=int)
+    dietaryReqs = request.args.getlist('dietaryReqs', type=str)
+
+    # Check if required parameters are provided
+    if days is None or mealLikes is None or mealDislikes is None or dietaryReqs is None:
+        return jsonify({"error": "Missing parameters"}), 400
+
+    # Call the getMealPlan function with the provided parameters
+    meal_plan = getMealPlan(7, mealLikes, mealDislikes, dietaryReqs)
+
+    # Return the result as a JSON response
+    # return jsonify({"meal_plan": meal_plan})
+
+    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
+    monToSun = {}
+    for i in range(0, 7):
+        monToSun[days[i]] = meal_plan[i]
+
+    return json.dumps({"meal_plan": monToSun})
     
 
 
