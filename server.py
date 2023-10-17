@@ -128,7 +128,9 @@ def get_meal_plan_montosun():
 
     monToSun = {}
     for i in range(0, 7):
-        monToSun[days[i]] = meal_plan[i]
+        monToSun[days[i]+"_breakfast"] = meal_plan[i]["breakfast"]
+        monToSun[days[i]+"_lunch"] = meal_plan[i]["lunch"]
+        monToSun[days[i]+"_dinner"] = meal_plan[i]["dinner"]
 
     return json.dumps({"meal_plan": monToSun})
     
