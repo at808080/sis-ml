@@ -1,0 +1,32 @@
+meal_id,meal_name,category,calories,protein,fat,carbohydrates,gluten,lactose,nuts,vegetarian,baking,frying,roasting,grilling,preparation_time,cuisine,temperature
+0,Pancakes,Breakfast,350,8,12,65,false,true,false,false,true,true,false,false,20,American,hot
+1,Oatmeal,Breakfast,200,5,3,40,true,true,false,true,false,false,false,false,10,American,hot
+2,Eggs and Bacon,Breakfast,450,20,30,5,true,true,false,false,true,true,false,false,15,American,hot
+3,French Toast,Breakfast,400,10,15,55,false,true,false,false,true,true,false,false,25,American,hot
+4,Breakfast Burrito,Breakfast,500,15,25,40,false,true,false,false,true,true,false,false,20,Mexican,hot
+5,Yogurt Parfait,Breakfast,250,5,2,50,false,true,true,true,false,false,false,false,10,American,cold
+6,Bagel with Cream Cheese,Breakfast,350,8,10,60,true,true,true,true,false,false,false,false,5,American,cold
+7,Smoothie Bowl,Breakfast,300,10,5,60,true,true,true,true,false,false,false,false,10,American,cold
+8,Scrambled Eggs,Breakfast,300,15,20,2,true,true,false,false,true,true,false,false,10,American,hot
+9,Banana Nut Muffin,Breakfast,350,6,15,50,true,true,true,true,true,false,false,false,20,American,hot
+10,Avocado Toast,Breakfast,400,10,20,30,true,true,true,true,false,false,false,false,10,American,hot
+11,Breakfast Sandwich,Breakfast,450,15,25,40,true,true,true,true,true,true,false,false,15,American,hot
+12,Granola with Milk,Breakfast,300,5,10,55,true,true,true,true,true,false,false,false,5,American,cold
+13,Spinach and Feta Omelette,Breakfast,350,20,15,10,true,true,false,false,true,true,false,false,15,American,hot
+14,Blueberry Pancakes,Breakfast,400,8,12,65,false,true,false,false,true,true,false,false,20,American,hot
+15,Breakfast Tacos,Breakfast,450,15,25,30,true,true,false,false,true,true,false,false,15,Mexican,hot
+16,Strawberry Smoothie,Breakfast,250,5,2,45,false,true,false,true,false,false,false,false,10,American,cold
+17,Scrambled Tofu,Breakfast,300,15,20,5,true,true,false,false,true,true,false,false,10,Vegan,hot
+18,Cinnamon Roll,Breakfast,400,5,20,55,true,true,true,true,true,false,false,false,20,American,hot
+19,Ham and Cheese Croissant,Breakfast,350,12,18,30,true,true,false,false,true,true,false,false,15,French,hot
+20,Breakfast Quesadilla,Breakfast,450,20,25,35,true,true,false,false,true,true,false,false,20,Mexican,hot
+21,Greek Yogurt with Honey,Breakfast,250,10,5,30,true,true,true,true,false,false,false,false,5,Greek,cold
+22,Breakfast Wrap,Breakfast,400,15,20,30,true,true,false,false,true,true,false,false,15,American,hot
+23,Belgian Waffles,Breakfast,500,8,25,60,false,true,false,false,true,true,false,false,20,Belgian,hot
+24,Breakfast Burrito Bowl,Breakfast,450,15,25,40,false,true,false,false,true,true,false,false,20,Mexican,hot
+25,Chia Seed Pudding,Breakfast,300,5,15,50,true,true,true,true,true,false,false,false,10,American,cold
+26,Porridge,Breakfast,250,8,5,45,true,true,false,true,false,false,false,false,10,Scottish,hot
+27,Breakfast Sausage,Breakfast,350,15,25,10,true,true,false,false,true,true,false,false,15,American,hot
+28,Papaya with Lime,Breakfast,200,2,1,50,true,true,true,true,false,false,false,false,5,Tropical,cold
+29,English Breakfast,Breakfast,500,20,30,25,true,true,false,false,true,true,false,false,30,English,hot
+30,Biscuits and Gravy,Breakfast,450,8,25,40,true,true,false,false,true,true,false,false,20,American,hot

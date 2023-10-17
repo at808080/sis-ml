@@ -46,7 +46,7 @@ def get_recommendations():
 
     if user_id is not None:
         user_user_recs = user_user_algo.get_neighbors(user_id, k=num_recommendations)
-        item_item_recs = item_item_algo.get_neighbors(user_id, k=num_recommendations)
+        # item_item_recs = item_item_algo.get_neighbors(user_id, k=num_recommendations)
 
         user_user_recs_rich = []
         for meal_id_ in user_user_recs:
@@ -86,7 +86,8 @@ def get_recommendations():
             })
 
         return jsonify({
-            "user_user_recommendations": user_user_recs# user_user_recs_rich,
+            "user_user_recommendations": user_user_recs
+            # user_user_recs_rich,
             # "item_item_recommendations": item_item_recs
         })
 
