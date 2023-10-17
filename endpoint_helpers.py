@@ -87,9 +87,9 @@ def getMealPlan(days, mealLikes, mealDislikes, dietaryReqs):
     mealPlan = []
     for day in range(0, days):
         mealPlan.append({
-            "breakfast": breakfastRecs.iloc[day]["meal_id"],
-            "lunch": lunchDinnerRecs.iloc[day*2]["meal_id"],#.values[0],
-            "dinner": lunchDinnerRecs.iloc[day*2+1]["meal_id"]#.values[0],
+            "breakfast": int(breakfastRecs.iloc[day]["meal_id"]),
+            "lunch": int(lunchDinnerRecs.iloc[day*2]["meal_id"]),#.values[0],
+            "dinner": int(lunchDinnerRecs.iloc[day*2+1]["meal_id"])#.values[0],
         })
 
     return mealPlan
